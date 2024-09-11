@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz php</title>
+</head>
+<body>
+    <form action="forms.php" method="post">
+        <label for="imienazw">Podaj swoje imię i nazwisko</label>
+        <input type="text" name="imienazw" id="imienazw" required><br>
+        <label for="gender">Podać swoją płeć</label>
+        <select name="gender" id="gender" required></select><br>
+        <label for="number">Proszę podaj swój numer telefonu</label>
+        <input type="tel" name="number" id="number" required><br>
+        <label for="email">Proszę podaj swój email</label>
+        <input type="email" name="email" id="email" required><br>
+        <label for="urodziny">Proszę podaj twoje urodziny</label>
+        <input type="date" name="urodziny" id="urodziny" required><br>
+        <input type="submit">
+    </form>
+</body>
+<script>
+let genders = [
+  "Male",
+  "Female",
+  "Non-binary",
+  "Agender",
+  "Genderqueer",
+  "Genderfluid",
+  "Two-spirit",
+  "Pangender",
+  "Neutrois",
+  "Bigender",
+  "Trigender",
+  "Transgender",
+  "Trans",
+  "Intersex",
+  "Cisgender",
+  "Cis male",
+  "Cis female",
+  "Gender non-conforming",
+  "Gender diverse",
+  "Gender questioning",
+  "Gender variant",
+  "Third gender",
+  "Two gender",
+  "All gender",
+  "No gender",
+  "Genderless",
+  "Gender neutral",
+  "Gender ambiguous",
+  "Cat",
+  "Dog",
+  "Other animal",
+  "Other gender"
+];
+const genderSelect = document.getElementById('gender');
+genders.forEach(gender => {
+    const option = document.createElement('option');
+    option.value = gender.toLowerCase(); 
+    option.textContent = gender;
+    genderSelect.appendChild(option);
+});
+</script>
+</html>
