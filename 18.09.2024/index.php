@@ -16,6 +16,7 @@
     <meta name="author" content="Hai Dang Do Hoang">
     <link rel="stylesheet" href="styles.css">
     <title>Kalkulator</title>
+    <script src="copyright.js"></script>
 </head>
 <body>
     <div>

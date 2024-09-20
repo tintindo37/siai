@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="copyright.js"></script>
 </head>
+
 <body>
     
 </body>
@@ -13,7 +15,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Hai Dang Do Hoang">
     <link rel="stylesheet" href="styles.css">
     <title>Kalkulator</title>
 </head>
