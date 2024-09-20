@@ -34,7 +34,7 @@
         </form>
     </div>
 <?php
-    if(isset($_POST["num01"]) && isset($_POST["num01"]) && isset($_POST["num02"]) && isset( $_POST["wybierz"])) {
+    if(isset($_POST["num01"]) && isset($_POST["num02"]) && isset( $_POST["wybierz"])) {
         $num01 = $_POST["num01"];
         $num02 = $_POST["num02"];
         $wybierz = $_POST["wybierz"];  
