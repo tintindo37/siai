@@ -69,9 +69,8 @@ async function fetchFeatureText() {
         cache: "no-store",
         cache: "no-cache",
     });
-    let text = await response.text();
     meta.name = "Author" ;
-    meta.content = await text;
+    meta.content = await response.text();
     document.getElementsByTagName('head')[0].appendChild(meta);
 }
 fetchFeatureText()
