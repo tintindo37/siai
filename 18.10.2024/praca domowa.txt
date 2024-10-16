@@ -1,0 +1,1 @@
+Wyswietl w php strukturę tabeli sql, używając mysqli używając sql DESCRIBE 
