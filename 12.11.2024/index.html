@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .signup{
+            border: 1px solid #999999;
+            font: normal 14px helvetica;
+            color: #444444;
+        }
+    </style>
+    <script>
+        function validateforname(name){
+            if(name == ""){
+                return "Nie wpisano imienia.\n" ;
+            }
+        }
+        function validatesurname(username){
+            if(username == ""){
+                return "Nie wpisano uzytkownika.\n" ;
+            }
+        }
+        function validatesurname(name){
+            if(name == ""){
+                return "Nie wpisano nazwy użytkownika.\n"
+            }else if (name.length < 5){
+                return "Nazwa użytkownika musi się składać z co najmniej 5 znaków.\n"
+            }else if (/[^a-zA-Z0-9_-]/.test(name))
+                return "Tylko znaki a-z, A-Z, 0-9, - oraz _ dopuszcza się w nazwie użytkownika.\n"
+            }
+        function validatePassword(name){
+            if (name == ""){
+                return "Nie wpisano hasła.\n"
+            }else if (name.length < 6){
+                 return "Hasło musi mieć co najmniej 6 znaków.\n"
+            }else if (! /[a-z]/.test(name) ||! /[A-Z]/.test(name) ||! /[0-9]/.test(name)){
+                return "W haśle musi się znaleźć co najmniej jeden znak z zakresów a-z, A-Z oraz 0-9.\n"
+            }
+        }
+        function validateAge(name){
+            if (name == "" || isNaN(name)){
+                return "Nie podano wieku.\\n"
+            } 
+            else if (name < 18 || name > 110){
+                return "Wiek musi się zawierać między 18 a 110.\n"
+            } 
+        }
+        function validateEmail(name){
+            if (name == ""){
+                return "Nie podano adresu e-mail.\n"
+            } 
+            else if (!((name.indexOf(".") > 0) && (name.indexOf("@") > 0)) ||/[^a-zA-Z0-9.@_-]/.test(name)){
+                return "Podany adres e-mail jest nieprawidłowy.\n"
+            }
+        }
+        function validate(form){
+           fail = validateforname(form.forename.value);
+           fail += validatesurname(form.surname.value);
+           fail += validatesurname(form.username.value);
+           fail += validatePassword(form.password.value);
+           fail += validateAge(form.age.value);
+           fail += validateEmail(form.email.value);
+           if (fail == ""){
+                return true;
+           }
+           else{ 
+                alert(fail);
+                return false;
+            }
+        }
+    </script>
+    <table class="signup" border="0" cellpadding="2" cellspacing="5" bgcolor="#eeeeee">
+        <form method="post" onsubmit="return validate(this)">
+            <tr>
+                <td>Imię</td>
+                <td><input type="text" maxlength="32" name="forename"></td>
+            </tr>
+            <tr>
+                <td>Nazwisko</td>
+                <td><input type="text" maxlength="32" name="surname"></td>
+            </tr>
+            <tr>
+                <td>Nazwa użytkownika</td>
+                <td><input type="text" maxlength="16" name="username"></td>
+            </tr>
+            <tr>
+                <td>Hasło</td>
+                <td><input type="text" maxlength="12" name="password"></td>
+            </tr>
+            <tr>
+                <td>Wiek</td>
+                <td><input type="text" maxlength="3" name="age"></td>
+            </tr>
+            <tr>
+                <td>E-mail</td>
+                <td><input type="text" maxlength="64" name="email"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" value="Zarejestruj się"></td>
+            </tr>               
+        </form>
+
+    </table>
+</body>
+</html>
